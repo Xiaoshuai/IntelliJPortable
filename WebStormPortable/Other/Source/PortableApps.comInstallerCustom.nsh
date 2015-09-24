@@ -22,9 +22,10 @@
 
 !macro CustomCodePostInstall
 ;=== delete unneeded directories
-RMDir /r  "$INSTDIR\App\IntelliJIDEA\$PLUGINSDIR"
-RMDir /r  "$INSTDIR\App\IntelliJIDEA\bin\$PLUGINSDIR"
+RMDir /r "$EXEDIR\App\IntelliJIDEA\$$PLUGINSDIR"
+RMDir /r "$EXEDIR\App\IntelliJIDEA\bin\$$PLUGINSDIR"
+RMDir /r "$EXEDIR\App\IntelliJIDEA\jre"
 ;===
 
-Clearerrors
+ClearErrors
 !macroend
